@@ -1,0 +1,62 @@
+img{
+    height: 300px;
+    object-fit: cover;
+}
+body{
+    background-color: #656565;
+}
+
+
+.grswatches li { overflow:hidden; display:inline-block; position:relative; height:17px; width:17px; margin:3px; background-size:100% auto; background-repeat:no-repeat; cursor:pointer; box-shadow:0 0 1px 1px #dddddd; border:2px solid #fff; border-radius: 30px; }
+.grswatches li.medium { height:25px; width:25px }
+.grswatches li.large { height:35px; width:35px }
+.grswatches li.active, 
+.grswatches li .white { box-shadow: 0 0 0 1px #000;  }
+.grswatches li .tooltip-label { z-index:2; top:-38px; bottom:auto; }
+.grswatches li:hover { box-shadow: 0 0 0 1px #000; overflow:visible; transition:all .2s ease-in-out; background-position:50% 0 }
+.grswatches li:hover .tooltip-label { opacity:1; top:-28px; visibility:visible }
+
+.grid_title{
+    font-size: 14px;
+    font-weight: 500;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}
+
+.button-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-top: 10px;
+    position: absolute;
+    bottom: 45%;
+    margin-left: 10px;
+    display: none;
+}
+
+
+.gbtn{
+    margin-bottom: 10px;
+}
+.button-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-top: 10px;
+    position: absolute;
+    bottom: 45%;
+    margin-left: 10px;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.card:hover .button-set {
+    opacity: 1; 
+    transition-delay: 0.5s; 
+}
+
