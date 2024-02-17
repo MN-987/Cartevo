@@ -21,7 +21,15 @@ ngOnInit(): void {
   });
 }
   deleteProductHandler(id:number){
-    // this.products=this._productServices.deleteProduct(id);
+    this._productServices.deleteProduct(id).subscribe({
+      next:(data)=>{
+        this.products=this.products.filter((obj:any)=>obj.id!==id)
+      },
+      error:(err)=>
+      {
+        console.log(`error`,err)
+      }
+      }  );
   }
   
 }
