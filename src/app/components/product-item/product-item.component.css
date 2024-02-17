@@ -1,5 +1,5 @@
 img{
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 body{
@@ -57,6 +57,5 @@ a {
 
 .card:hover .button-set {
     opacity: 1; 
-    transition-delay: 0.5s; 
 }
 

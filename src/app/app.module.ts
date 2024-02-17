@@ -13,6 +13,7 @@ import { NotFoundComponent } from './components/sharedComponetns/not-found/not-f
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
   ],
   imports: [
     BrowserModule,FormsModule ,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
