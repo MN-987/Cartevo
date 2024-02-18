@@ -1,4 +1,6 @@
+import { productList } from './../../services/productsList';
 import { IProduct } from './../../models/iproduct';
+import { FashionProduct } from 'src/app/models/fashionProduct';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductStaticService } from 'src/app/services/product-static.service';
@@ -15,12 +17,14 @@ export class ProductsFormComponent implements OnInit {
     public _activatedRoute: ActivatedRoute,
     public router: Router
   ) {}
-
   productPrice: number = 0;
   productName: string = '';
   productQuantity: number = 0;
   prdoIdParam: any = '';
-
+  productStars: number = 0;
+  productImageUrl: string = '';
+  productDecription: string = '';
+  
   ngOnInit(): void {
     this._activatedRoute.params.subscribe({
       next: (params) => {
@@ -35,15 +39,19 @@ export class ProductsFormComponent implements OnInit {
           this.productName = product.name;
           this.productQuantity = product.quantity;
           this.productPrice = product.price;
+          this.productStars = product.rating;
+          this.productImageUrl = product.baseImageUrl;
+          this.productDecription = product.description;
         },
       });
     }
   }
 
   addProductHandler() {
+    
     if (this.prdoIdParam != 0) {
       // If product ID is not zero, update the product
-      const updatedProduct: IProduct = this.createProductObject();
+      const updatedProduct: FashionProduct = this.createProductObject();
       // this._productService.updateProduct(updatedProduct);
       this._productService.editProduct(this.prdoIdParam, updatedProduct).subscribe({
         next: (data) => {
@@ -69,12 +77,17 @@ export class ProductsFormComponent implements OnInit {
     }
   }
 
-  private createProductObject(): IProduct {
+   randomId=Math.floor(Math.random() * 1000) + 1;
+  private createProductObject(): FashionProduct {
+    console.log(`from create Prodduct object `,  typeof(this.prdoIdParam))
     return {
-      id: +this.prdoIdParam || Math.floor(Math.random() * 1000) + 1,
+      id: +this.prdoIdParam || this.randomId.toString(),
       name: this.productName,
       quantity: this.productQuantity,
       price: this.productPrice,
+      baseImageUrl: this.productImageUrl,
+      rating: this.productStars.toString(),
+      description: this.productDecription,
     };
   }
 }

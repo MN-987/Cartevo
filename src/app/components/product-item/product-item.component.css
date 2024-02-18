@@ -6,7 +6,9 @@ body{
     background-color: #656565;
 }
 
-
+img:hover{
+  cursor: pointer;
+}
 .grswatches li { overflow:hidden; display:inline-block; position:relative; height:17px; width:17px; margin:3px; background-size:100% auto; background-repeat:no-repeat; cursor:pointer; box-shadow:0 0 1px 1px #dddddd; border:2px solid #fff; border-radius: 30px; }
 .grswatches li.medium { height:25px; width:25px }
 .grswatches li.large { height:35px; width:35px }
@@ -57,5 +59,6 @@ a {
 
 .card:hover .button-set {
     opacity: 1; 
+    cursor: pointer;
 }
 

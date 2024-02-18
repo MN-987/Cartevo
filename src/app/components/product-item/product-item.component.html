@@ -1,31 +1,59 @@
+<div class="col-md-4 margin: auto;">
+  <div class="card" style="width: 18rem; border: 0px;">
+    <div class="image-container" >
+     <span>
 
-    <div class="col-md-4 margin: auto; " >
-      <div class="card" style="width: 18rem; border: 0px ;">
-        <img
-          src="https://vogal-demo.myshopify.com/cdn/shop/products/5_8c134148-8d71-41a9-b425-e9a0170a0069_350x.jpg?v=1675917784"
-          class="card-img-top" alt="..."
-          style="position: relative"
-        >
-        <div class="button-set hide-sm">
-            <a class="gbtn pr wishlist addto-wishlist"><i class="fa-regular fa-heart"></i></a>
-            <a class="gbtn pr wishlist addto-wishlist"><i class="bi bi-cart"></i></a>
-            <a class="gbtn pr wishlist addto-wishlist"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </div>
-        <div class="card-body " >
-          <a href="/" class="fs-6 grid_title">Everyday Tube Top Ribbed </a>
-          <p class="card-text">$180</p>
-          <div class="d-flex fa-sm">
-            <i class="fa-solid fa-star mb-3  "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i>
-          </div>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-        <ul class="grswatches">
-          <li class="swatch small clrswt swtblue" style="background-color: rgba(169,209,233,255);"> </li>
-          <li class="swatch small clrswt swtblue" style="background-color: rgba(191,219,201,255)"> </li>
-          <li class="swatch small clrswt swtblue" style="background-color: rgba(195,177,225,255)"> </li>
-        </ul>
-      </div>
+      <a [routerLink]="['/products', productItem.product.id]">
+        <img [src]="getDefaultImageUrl()" class="card-img-top" alt="..." style="position: relative">
+      </a>
+
+       
+     </span>
     </div>
-    
+    <div class="button-set hide-sm">
+      <a class="gbtn pr wishlist addto-wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a class="gbtn pr wishlist addto-wishlist"><i class="bi bi-cart"></i></a>
+      <a class="gbtn pr wishlist addto-wishlist"><i class="fa-solid bi bi-eye"  [routerLink]="['/products', productItem.product.id]"></i></a>
+    </div>
+    <div class="card-body">
+      <a href="/" class="fs-6 grid_title">{{productItem.product.name}}</a>
+      <p class="card-text">${{productItem.product.price}}</p>
+      <div class="d-flex fa-sm">
+        <i class="fa-solid fa-star mb-3"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+          class="fa-solid fa-star"></i>
+      </div>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+    <ul class="grswatches">
+      <li class="swatch small clrswt swtblue" style="background-color: rgba(169,209,233,255);" onclick="handleColorRadio($event)"> </li>
+      <li class="swatch small clrswt swtblue" style="background-color: rgba(191,219,201,255)" onclick="handleColorRadio($event)"> </li>
+      <li class="swatch small clrswt swtblue" style="background-color: rgba(195,177,225,255)" onclick="handleColorRadio($event)"> </li>
+    </ul>
+  </div>
+</div>
 
+<style>
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 400px; 
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+}
+
+.image-container:hover {
+  background-size: cover;
+  background-position: center;
+}
+
+.card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+</style>

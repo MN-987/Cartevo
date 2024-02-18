@@ -1,46 +1,62 @@
 {
   "products": [
     {
+      "id": "1",
+      "name": "Everyday Tube Top Ribbed",
+      "quantity": "15",
+      "price": "188",
+      "baseImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/files/SB1_560x.jpg?v=1679727714",
+      "rating": "3"
+    },
+    {
       "id": "2",
-      "name": "Book from Server",
+      "name": "Long Maxi DressA",
+      "quantity": "12",
+      "price": "70",
+      "baseImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products/1_a59bc14b-6bf0-4a3e-abca-57aa46f7fef4_350x.jpg?v=1676004679",
+      "rating": "4"
+    },
+    {
+      "id": "3",
+      "name": "Solid Cargo Pant",
+      "productDescription": "The construction lifts and smooths, giving your rear assets all they need for an amped-up style that screams sex appeal from every angle. With a chic hue, this one makes for a perfect pick this fall. So get your basics right and you are good to go.",
+      "baseImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products/10_82ef4b13-4d38-45f9-b5bd-101441e1ea00_350x.jpg?v=1675914818",
+      "secondaryImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products/12_06769c95-1359-470e-8c2b-fc19c77ff7a2_350x.jpg?v=1675914818",
+      "productColors": {
+        "blueImageUrl": "",
+        "sageImageUrl": "",
+        "purbleImageUrl": "",
+        "redImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products…921b-4711-b455-7c1919ab52fe_400x.jpg?v=1675914818",
+        "blackImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products…5a88-4a41-a19c-a3ed8df392db_400x.jpg?v=1675914818",
+        "khakiImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products…4d38-45f9-b5bd-101441e1ea00_400x.jpg?v=1675914818",
+        "orangeImageUrl": "",
+        "beigeImageUrl": "",
+        "pinkImageUrl": ""
+      },
+      "price": "50",
+      "quantity": "3",
+      "stars": "3"
+    },
+    {
+      "id": "4",
+      "name": "Knee Length Denim Skirts",
+      "productDescription": "An ideal pick for a party eve, this playsuit is designed with a sequin embellished surface and a spaghetti neck. With a chic hue, this one makes for a perfect pick this fall.Beautifully tailored with premium fabric. So get your basics right and you are good to go.",
+      "baseImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products/1_f17b7405-29c8-4af8-ad8f-4046b043d4cd_350x.jpg?v=1675920806",
+      "secondaryImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products/7_745d5d69-ef4c-48f4-a668-5ffad6ce7fc1_350x.jpg?v=1675920806",
+      "productColors": {
+        "blueImageUrl": "",
+        "sageImageUrl": "",
+        "purbleImageUrl": "",
+        "redImageUrl": "",
+        "blackImageUrl": "",
+        "khakiImageUrl": "",
+        "orangeImageUrl": "",
+        "beigeImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products…169b-4d24-94fb-bda112dc29df_400x.jpg?v=1675920806",
+        "pinkImageUrl": "https://vogal-demo.myshopify.com/cdn/shop/products…9ff3-43a1-9ecc-632032e2d637_400x.jpg?v=1675920806"
+      },
       "price": "200",
-      "quantinty": "200"
-    },
-    {
-      "id": "5",
-      "name": "Book from Server",
-      "price": "500",
-      "quantinty": "500"
-    },
-    {
-      "id": "6",
-      "name": "Book from Server",
-      "price": "600",
-      "quantinty": "600"
-    },
-    {
-      "id": "7",
-      "name": "Book from Server",
-      "price": "700",
-      "quantinty": "700"
-    },
-    {
-      "id": "8",
-      "name": "Book from Server",
-      "price": "800",
-      "quantinty": "800"
-    },
-    {
-      "id": "0",
-      "name": "hahaha",
-      "quantity": 222,
-      "price": 222
-    },
-    {
-      "id": 456,
-      "name": "aaaaaaaaaa",
-      "quantity": 2222,
-      "price": 2222
+      "quantity": "10",
+      "stars": "5"
     }
   ]
 }
