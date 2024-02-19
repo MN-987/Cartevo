@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-baseURl:string='http://localhost:3005/products'
+baseURl:string='https://fashion-products.onrender.com/products'
   constructor( public _httpClient:HttpClient ) { }
   getAllProducts(){
     return this._httpClient.get(this.baseURl)

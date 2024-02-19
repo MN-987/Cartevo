@@ -56,7 +56,7 @@ export class ProductsFormComponent implements OnInit {
       this._productService.editProduct(this.prdoIdParam, updatedProduct).subscribe({
         next: (data) => {
           console.log('Product updated successfully');
-          this.router.navigate(['/products']);
+          this.router.navigate(['/']);
         },
         error: (err) => {
           console.log('Error updating product', err);
